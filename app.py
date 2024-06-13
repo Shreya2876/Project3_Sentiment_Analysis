@@ -38,11 +38,8 @@ def predict():
         prediction_label = class_mapping[class_index]
         print(f"Prediction label: {prediction_label}")  # Debugging
 
-        # Optionally, output the probability of the predicted class
-        output_probability = '{0:.2f}'.format(prediction[0][class_index])
-        print(f"Output probability: {output_probability}")  # Debugging
-
-        return render_template('index.html', prediction=prediction_label, probability=output_probability)
+    
+        return render_template('index.html', prediction=prediction_label)
 
 if __name__ == "__main__":
     app.run(debug=True)
